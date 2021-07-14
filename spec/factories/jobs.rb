@@ -1,14 +1,10 @@
 FactoryBot.define do
-  factory :job do
-    pickup_address { "MyString" }
-    pick_lat { 1.5 }
-    pick_lng { 1.5 }
-    drop_address { "MyString" }
-    drop_lat { 1.5 }
-    drop_lng { 1.5 }
-    is_claimed { false }
-    is_executed { false }
-    gogetter_id { 1 }
-    user_id { 1 }
-  end
+ factory :job, class: Job do
+   pickup_address { Faker::Address.street_address }
+   pick_lat { Faker::Number.number(digits: 2) }
+   pick_lng { Faker::Number.number(digits: 2) }
+   drop_address { Faker::Address.street_address }
+   drop_lat { Faker::Number.number(digits: 2) }
+   drop_lng { Faker::Number.number(digits: 2) }
+ end
 end
