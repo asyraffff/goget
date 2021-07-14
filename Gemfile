@@ -14,9 +14,22 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Security
 gem 'bcrypt'
+gem 'jwt'
+
+# Middleware
+gem 'rack-cors'
+
+#other
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec', '~> 3.5'
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do
